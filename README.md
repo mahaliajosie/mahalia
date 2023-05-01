@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @zenviolet
-- 👀 I’m interested in personal projects & HCI
-- 🌱 I’m currently learning DB
+- 👀 I’m interested in HCI
+- 🌱 I’m currently learning html/c++
 - 💞️ I’m looking to collaborate on as much as possible 
 - 📫 How to reach me via email
 
