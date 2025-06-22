@@ -1,0 +1,71 @@
+/* =============== Initial Style =============== */
+
+body {
+    margin: 0;
+    font-family: 'DM Serif Display', serif;
+    background: url('../assets/images/homepage_bg.png') no-repeat center center fixed;
+    background-size: cover; 
+    color: #1A1A1A;
+  }
+  /* ========== Layout ========== */
+  .landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .circle-bg {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* ========== Middle Circle ========== */
+  .circle-core {
+    text-align: center;
+  }
+  
+  .initial {
+    font-size: 5rem;
+    color: #3D202A;
+  }
+  
+  .divider {
+    margin: 10px auto;
+    width: 80px;
+    border: 1px solid #3D202A;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #3D202A;
+  }
+  
+  /* ========== Circle Navigation ========== */
+  .circle-nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: none;
+  }
+  
+  .nav-item {
+    pointer-events: all;
+    position: absolute;
+    transform-origin: center;
+    font-family: 'Alfa Slab One', serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #132728;
+    transition: all 0.3s ease;
+  }
