@@ -33,18 +33,18 @@ body {
   
   .initial {
     font-size: 5rem;
-    color: #3D202A;
+    color: #412234;
   }
   
   .divider {
     margin: 10px auto;
     width: 80px;
-    border: 1px solid #3D202A;
+    border: 1px solid #412234;
   }
   
   .star {
     font-size: 1.5rem;
-    color: #3D202A;
+    color: #412234;
   }
   
   /* ========== Circle Navigation ========== */
@@ -66,6 +66,6 @@ body {
     font-family: 'Alfa Slab One', serif;
     font-size: 1.1rem;
     text-decoration: none;
-    color: #132728;
+    color: #2E4052;
     transition: all 0.3s ease;
   }
