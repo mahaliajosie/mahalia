@@ -11,16 +11,50 @@
   <main class="landing-page">
     <div class="circle-bg">
       <div class="circle-core">
-        <span class="initial">mahalia</span>
+        <span class="initial">Maelynn</span>
         <hr class="divider" />
         <span class="star">★</span>
       </div>
-      <nav class="circle-nav">
-        <a href="collection.html" class="nav-item" data-section="collection">My Collection</a>
+      <svg class="circle-nav" viewBox="0 0 400 400" width="400" height="400">
+        <!-- <a href="collection.html" class="nav-item" data-section="collection">My Collection</a>
         <a href="obsessions.html" class="nav-item" data-section="obsessions">Current Obsessions</a>
         <a href="recoroom.html" class="nav-item" data-section="reco">The Reco Room</a>
-        <a href="wishlist.html" class="nav-item" data-section="archive">Possibility Archive</a>
-      </nav>
+        <a href="wishlist.html" class="nav-item" data-section="archive">Possibility Archive</a> -->
+
+        <!-- Circle Path (invisible) -->
+        <defs>
+          <path id="circlePath" d="
+          M 200, 200
+          m -150, 0
+          a 150, 150 0 1,1 300,0
+          a 150, 150 0 1,1 -300,0 "
+          />
+        </defs>
+        <!-- Curve Text along Path -->
+        <a xlink:href="collection.html">
+          <text dy="-10" textLength="1000">
+            <textPath href="#circlePath" startOffset="0%" class="nav-item">My Collection • </textPath>
+          </text>
+        </a>
+
+        <a xlink:href="obsessions.html">
+          <text dy="-10" textLength="1000">
+            <textPath href="#circlePath" startOffset="25%" class="nav-item">Current Obsessions • </textPath>
+          </text>
+        </a>
+
+        <a xlink:href="recoroom.html">
+          <text dy="-10" textLength="1000">
+            <textPath href="#circlePath" startOffset="50%" class="nav-item">The Reco Room • </textPath>
+          </text>
+        </a>
+
+        <a xlink:href="archive.html">
+          <text dy="-10" textLength="1000">
+            <textPath href="#circlePath" startOffset="75%" class="nav-item">Possibility Archive • </textPath>
+          </text>
+        </a>
+      </svg>
     </div>
   </main>
   <script src="scripts/main.js"></script>
