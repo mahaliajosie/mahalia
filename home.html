@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>maelynn // Home</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  <title>mahalia // Home</title>
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
@@ -15,27 +15,29 @@
         <hr class="divider" />
         <span class="star">✦</span>
       </div>
-        <svg class="circle-nav" viewBox="0 0 500 500">
-          <defs>
-            <!-- Four curved arcs positioned around the center -->
-            <path id="path1" d="M 150,250 A 100,100 0 0,1 250,150" />
-            <path id="path2" d="M 250,150 A 100,100 0 0,1 350,250" />
-            <path id="path3" d="M 350,250 A 100,100 0 0,1 250,350" />
-            <path id="path4" d="M 250,350 A 100,100 0 0,1 150,250" />
-          </defs>
-        <!-- Curve Text along Path -->
-        <a xlink:href="collection.html">
-          <text class="nav-text"><textPath href="#path1">My Collection •</textPath></text>
-        </a>
-        <a xlink:href="obsessions.html">
-          <text class="nav-text"><textPath href="#path2">Current Obsessions •</textPath></text>
-        </a>
-        <a xlink:href="reco.html">
-          <text class="nav-text"><textPath href="#path3">The Reco Room •</textPath></text>
-        </a>
-        <a xlink:href="archive.html">
-          <text class="nav-text"><textPath href="#path4">Possibility Archive •</textPath></text>
-        </a>
+
+      <svg viewBox="0 0 600 600" width="500" height="500" class="circle-nav">
+        <defs>
+          <path id="circlePath"
+            d="M 300,300
+               m -200,0
+               a 200,200 0 1,1 400,0
+               a 200,200 0 1,1 -400,0" />
+        </defs>
+
+        <!-- Use a single full circle, then offset each link -->
+        <text dy="-10" class="nav-text">
+          <textPath href="#circlePath" startOffset="0%">My Collection •</textPath>
+        </text>
+        <text dy="-10" class="nav-text">
+          <textPath href="#circlePath" startOffset="25%">Current Obsessions •</textPath>
+        </text>
+        <text dy="-10" class="nav-text">
+          <textPath href="#circlePath" startOffset="50%">The Reco Room •</textPath>
+        </text>
+        <text dy="-10" class="nav-text">
+          <textPath href="#circlePath" startOffset="75%">Possibility Archive •</textPath>
+        </text>
       </svg>
     </div>
   </main>
