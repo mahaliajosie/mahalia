@@ -13,46 +13,28 @@
       <div class="circle-core">
         <span class="initial">Maelynn</span>
         <hr class="divider" />
-        <span class="star">★</span>
+        <span class="star">✦</span>
       </div>
-      <svg class="circle-nav" viewBox="0 0 400 400" width="400" height="400">
-        <!-- <a href="collection.html" class="nav-item" data-section="collection">My Collection</a>
-        <a href="obsessions.html" class="nav-item" data-section="obsessions">Current Obsessions</a>
-        <a href="recoroom.html" class="nav-item" data-section="reco">The Reco Room</a>
-        <a href="wishlist.html" class="nav-item" data-section="archive">Possibility Archive</a> -->
-
-        <!-- Circle Path (invisible) -->
-        <defs>
-          <path id="circlePath" d="
-          M 200, 200
-          m -150, 0
-          a 150, 150 0 1,1 300,0
-          a 150, 150 0 1,1 -300,0 "
-          />
-        </defs>
+        <svg class="circle-nav" viewBox="0 0 500 500">
+          <defs>
+            <!-- Four curved arcs positioned around the center -->
+            <path id="path1" d="M 150,250 A 100,100 0 0,1 250,150" />
+            <path id="path2" d="M 250,150 A 100,100 0 0,1 350,250" />
+            <path id="path3" d="M 350,250 A 100,100 0 0,1 250,350" />
+            <path id="path4" d="M 250,350 A 100,100 0 0,1 150,250" />
+          </defs>
         <!-- Curve Text along Path -->
         <a xlink:href="collection.html">
-          <text dy="-10" textLength="1000">
-            <textPath href="#circlePath" startOffset="0%" class="nav-item">My Collection • </textPath>
-          </text>
+          <text class="nav-text"><textPath href="#path1">My Collection •</textPath></text>
         </a>
-
         <a xlink:href="obsessions.html">
-          <text dy="-10" textLength="1000">
-            <textPath href="#circlePath" startOffset="25%" class="nav-item">Current Obsessions • </textPath>
-          </text>
+          <text class="nav-text"><textPath href="#path2">Current Obsessions •</textPath></text>
         </a>
-
-        <a xlink:href="recoroom.html">
-          <text dy="-10" textLength="1000">
-            <textPath href="#circlePath" startOffset="50%" class="nav-item">The Reco Room • </textPath>
-          </text>
+        <a xlink:href="reco.html">
+          <text class="nav-text"><textPath href="#path3">The Reco Room •</textPath></text>
         </a>
-
         <a xlink:href="archive.html">
-          <text dy="-10" textLength="1000">
-            <textPath href="#circlePath" startOffset="75%" class="nav-item">Possibility Archive • </textPath>
-          </text>
+          <text class="nav-text"><textPath href="#path4">Possibility Archive •</textPath></text>
         </a>
       </svg>
     </div>

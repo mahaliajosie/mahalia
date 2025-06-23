@@ -33,10 +33,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2;
   }
   
   .initial {
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-family: 'DM Serif Display', serif;
     color: #412234;
   }
@@ -48,7 +49,7 @@
   }
   
   .star {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #412234;
   }
 
@@ -66,8 +67,9 @@
     font-size: 1rem;
     fill: #2E4052;
     letter-spacing: 1px;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: fill 0.3s ease;
+    text-anchor: middle;
   }
   
   /* ========== Future Hover Effect ========== */
