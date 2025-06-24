@@ -2,7 +2,7 @@
   /* =============== Initial Style =============== */
   body {
     margin: 0;
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Gloock', serif;
     background: url('/assets/images/homepage_bg.png') no-repeat center center fixed;
     background-size: cover;
     color: rgba(232, 28, 232, 0.667);
@@ -34,7 +34,7 @@
   
   .initial {
     font-size: 3.5rem;
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Gloock', serif;
     color: #412234;
   }
   
@@ -51,22 +51,34 @@
   
   /* ========== Circle Navigation ========== */ 
   .circle-nav {
+    height: auto;
     width: 100%;
-    height: 100%;
+    max-width: 1000px;
     overflow: visible;
+    display: block;
+    aspect-ratio: 1 / 1;
+
   }
   
   .nav-text {
     fill: #2E4052;
-    font-size: 1.5rem;
-    font-family: 'Alfa Slab One', serif;
+    font-size: 3.0rem;
+    font-weight: 900;
+    font-family: 'Clash Display', sans-serif;
     text-anchor: middle;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     transition: fill 0.3s ease;
     cursor: pointer;
+    pointer-events: all;
   }
   
   /* ========== Hover Effect ========== */
   .nav-text:hover {
     fill: #824c9a;
   }
+
+  /* --- Debug Circle --- */
+  /* textPath {
+    stroke: red;
+    stroke-width: 0.5px;
+  } */
