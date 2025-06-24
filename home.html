@@ -5,33 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maelynn</title>
   <link rel="stylesheet" href="styles/main.css" />
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="circle-container">
-    <div class="title-wrapper">
-      <h1 class="title">Maelynn</h1>
-    </div>
+  <div class="background"></div>
 
-    <svg class="nav-circle" viewBox="0 0 600 600">
+  <div class="svg-wrapper">
+    <svg viewBox="0 0 500 500" class="circle-svg">
       <defs>
-        <path id="path1" d="M300,300 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
+        <path id="circlePath" d="M250,250 m-220,0 a220,220 0 1,1 440,0 a220,220 0 1,1 -440,0" />
       </defs>
 
-      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
-        <textPath href="#path1" startOffset="2%">✦ My Collection</textPath>
+      <text class="nav-text">
+        <textPath 
+          href="#circlePath" 
+          startOffset="0%" 
+          textLength="250" 
+          lengthAdjust="spacing">
+          <a href="#my-collection">My Collection ✦</a>
+        </textPath>
       </text>
-      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
-        <textPath href="#path1" startOffset="28%">✦ Current Obsessions</textPath>
+      <text class="nav-text">
+        <textPath 
+          href="#circlePath" 
+          startOffset="25%" 
+          textLength="250" 
+          lengthAdjust="spacing">
+          <a href="#current-obsessions">Current Obsessions ✦</a>
+        </textPath>
       </text>
-      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
-        <textPath href="#path1" startOffset="54%">✦ The Reco Room</textPath>
+      <text class="nav-text">
+        <textPath 
+          href="#circlePath" 
+          startOffset="50%" 
+          textLength="250" 
+          lengthAdjust="spacing">
+          <a href="#the-reco-room">The Reco Room ✦</a>
+        </textPath>
       </text>
-      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
-        <textPath href="#path1" startOffset="80%">✦ Possibility Archive</textPath>
+      <text class="nav-text">
+        <textPath 
+          href="#circlePath" 
+          startOffset="75%" 
+          textLength="250" 
+          lengthAdjust="spacing">
+          <a href="#possibility-archive">Possibility Archive ✦</a>
+        </textPath>
       </text>
     </svg>
+
+    <h1 class="title">Maelynn</h1>
   </div>
 </body>
 </html>

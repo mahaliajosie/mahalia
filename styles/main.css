@@ -1,41 +1,70 @@
+:root {
+  --circle-radius: 220px;
+  --font-main: 'Clash Display', sans-serif;
+  --font-title: 'Gloock', serif;
+  --circle-color: #1c2e35;
+  --hover-color: #8e4585;
+  --title-color: #561f35;
+}
+
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  font-family: 'Clash Display', sans-serif;
+  font-family: var(--font-main);
   background: url('../assets/images/homepage_bg.png') no-repeat center center fixed;
   background-size: cover;
-  overflow: hidden;
+  background-color: #7a79a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.circle-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-.title-wrapper {
+.background {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -52%); /* adjust vertical offset */
-  z-index: 2;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.svg-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-text {
+  font-size: 28px;
+  font-weight: 700;
+  fill: var(--circle-color);
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.nav-text a {
+  fill: var(--circle-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.nav-text a:hover {
+  fill: var(--hover-color);
 }
 
 .title {
-  font-family: 'Gloock', serif;
-  font-size: 72px;
-  font-weight: 500;
-  color: #561f35;
-  text-align: center;
-}
-
-.nav-circle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  z-index: 1;
+  font-family: var(--font-title);
+  font-size: 64px;
+  color: var(--title-color);
+  text-align: center;
+  pointer-events: none;
 }
