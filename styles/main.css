@@ -1,77 +1,69 @@
+/* ---------- root design tokens ---------- */
 :root {
-  --circle-radius: 220px;
   --font-main: 'Clash Display', sans-serif;
   --font-title: 'Gloock', serif;
-  --circle-color: #1c2e35;
-  --hover-color: #8e4585;
-  --title-color: #561f35;
+  --clr-nav:    #1c2e35;
+  --clr-hover:  #8e4585;
+  --clr-title:  #561f35;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  font-family: var(--font-main);
-  background: url('../assets/images/homepage_bg.png') no-repeat center center fixed;
-  background-size: cover;
-  background-color: #7a79a1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ---------- page backdrop ---------- */
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-main);
+  background:url('../assets/images/homepage_bg.png') center/cover fixed no-repeat;
+  overflow:hidden;
 }
 
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+/* ---------- centering wrapper ---------- */
+.centered-content{
+  position:relative;
+  width:600px;   /* matches SVG viewBox */
+  height:600px;
 }
 
-.centered-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.svg-wrapper {
-  position: relative;
-  width: 600px;
-  height: 600px;
-}
-
-.circle-svg {
-  width: 100%;
-  height: 100%;
+/* ---------- title ---------- */
+.title{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-family:var(--font-title);
+  font-size:72px;
+  color:var(--clr-title);
+  pointer-events:none;
+  user-select:none;
 }
 
-.nav-text {
-  font-size: 28px;
-  font-weight: 700;
-  fill: var(--circle-color);
-  text-anchor: middle;
-  dominant-baseline: middle;
+/* ---------- nav ring SVG ---------- */
+.nav-ring{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
-.nav-text a {
-  fill: var(--circle-color);
-  text-decoration: none;
-  cursor: pointer;
-  transition: fill 0.3s ease;
+/* --- curved category styling --- */
+.nav-text{
+  font-size:32px;
+  font-weight:700;
+  fill:var(--clr-nav);
+  text-anchor:middle;
+  dominant-baseline:middle;
 }
 
-.nav-text a:hover {
-  fill: var(--hover-color);
+/* --- clickable link / hover effect --- */
+.nav-text a{
+  fill:var(--clr-nav);
+  text-decoration:none;
+  transition:fill .3s ease;
+  pointer-events:all;        /* keep links clickable */
 }
-
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-title);
-  font-size: 64px;
-  color: var(--title-color);
-  text-align: center;
-  pointer-events: none;
+.nav-text a:hover{
+  fill:var(--clr-hover);
 }
