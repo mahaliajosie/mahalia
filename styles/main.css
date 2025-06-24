@@ -11,7 +11,7 @@ body {
   font-family: 'Clash Display', sans-serif;
   background: url('../assets/images/homepage_bg.png') no-repeat center center fixed;
   background-size: cover;
-  background-color: #7a79a1; /*  fallback color */
+  background-color: #7a79a1;
 }
 
 .circle-container {
@@ -24,20 +24,13 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0;
-  height: 0;
   transform: translate(-50%, -50%);
 }
 
 .nav-item {
-  --angle: calc(var(--i) * (360deg / var(--nav-count)));
   position: absolute;
   top: 0;
   left: 0;
-  transform:
-    rotate(var(--angle))
-    translateY(calc(-1 * var(--nav-radius)))
-    rotate(calc(-1 * var(--angle)));
   transform-origin: center;
   font-size: 48px;
   font-weight: 700;
@@ -46,6 +39,20 @@ body {
   white-space: nowrap;
   cursor: pointer;
   transition: color 0.3s ease;
+}
+
+/* Set --i using classes */
+.i0 { --i: 0; }
+.i1 { --i: 1; }
+.i2 { --i: 2; }
+.i3 { --i: 3; }
+
+.nav-item {
+  --angle: calc(var(--i) * (360deg / var(--nav-count)));
+  transform:
+    rotate(var(--angle))
+    translateY(calc(-1 * var(--nav-radius)))
+    rotate(calc(-1 * var(--angle)));
 }
 
 .nav-item:hover {
