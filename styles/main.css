@@ -27,10 +27,17 @@ body {
   z-index: -1;
 }
 
+.centered-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .svg-wrapper {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
 }
 
 .circle-svg {
