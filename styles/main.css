@@ -1,17 +1,16 @@
 :root {
-  --nav-radius: 230px;
-  --nav-count: 4;
+  --nav-font: 'Clash Display', sans-serif;
+  --title-font: 'Gloock', serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
-  font-family: 'Clash Display', sans-serif;
+  font-family: var(--nav-font);
   background: url('../assets/images/homepage_bg.png') no-repeat center center fixed;
   background-size: cover;
-  background-color: #7a79a1;
+  overflow: hidden;
 }
 
 .circle-container {
@@ -20,53 +19,37 @@ body {
   height: 100vh;
 }
 
-.circle-nav {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.nav-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: center;
-  font-size: 48px;
-  font-weight: 700;
-  color: #1c2e35;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-/* Set --i using classes */
-.i0 { --i: 0; }
-.i1 { --i: 1; }
-.i2 { --i: 2; }
-.i3 { --i: 3; }
-
-.nav-item {
-  --angle: calc(var(--i) * (360deg / var(--nav-count)));
-  transform:
-    rotate(var(--angle))
-    translateY(calc(-1 * var(--nav-radius)))
-    rotate(calc(-1 * var(--angle)));
-}
-
-.nav-item:hover {
-  color: #8e4585;
-}
-
 .title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Gloock', serif;
+  font-family: var(--title-font);
   font-size: 72px;
   font-weight: 500;
   color: #561f35;
   text-align: center;
+  z-index: 1;
+}
+
+.circle-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-item {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1c2e35;
+  white-space: nowrap;
+  text-align: center;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #8e4585;
 }

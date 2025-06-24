@@ -11,13 +11,31 @@
 </head>
 <body>
   <div class="circle-container">
-    <div class="circle-nav">
-      <div class="nav-item i0">My Collection ✦</div>
-      <div class="nav-item i1">Current Obsessions ✦</div>
-      <div class="nav-item i2">The Reco Room ✦</div>
-      <div class="nav-item i3">Possibility Archive ✦</div>
-    </div>
     <h1 class="title">Maelynn</h1>
+    <div class="circle-nav" id="circle-nav">
+      <div class="nav-item">My Collection ✦</div>
+      <div class="nav-item">Current Obsessions ✦</div>
+      <div class="nav-item">The Reco Room ✦</div>
+      <div class="nav-item">Possibility Archive ✦</div>
+    </div>
   </div>
+
+  <script>
+    const navItems = document.querySelectorAll('.nav-item');
+    const container = document.getElementById('circle-nav');
+    const radius = 230; // distance from center
+
+    navItems.forEach((item, i) => {
+      const angle = (2 * Math.PI / navItems.length) * i;
+      const x = radius * Math.cos(angle);
+      const y = radius * Math.sin(angle);
+
+      item.style.position = 'absolute';
+      item.style.left = `calc(50% + ${x}px)`;
+      item.style.top = `calc(50% + ${y}px)`;
+      item.style.transform = `translate(-50%, -50%) rotate(${angle}rad)`;
+      item.style.transformOrigin = 'center';
+    });
+  </script>
 </body>
 </html>
