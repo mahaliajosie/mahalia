@@ -74,45 +74,51 @@ body {
   pointer-events: none;
 }
 
-.circle-item {
+.nav-item-wrapper {
+  --total: 4;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: rotate(calc(var(--i) * 90deg));
+  transform-origin: center;
+}
+
+.nav-item {
+  position: absolute;
+  top: -240px; /* radius */
+  left: 50%;
+  transform: translateX(-50%) rotate(calc(var(--i) * -90deg));
   font-size: 48px;
   font-family: 'Clash Display', sans-serif;
   font-weight: 600;
   color: #2E4052;
-  transform-origin: 0 0;
-  transform: rotate(calc(var(--i) * 90deg)) translate(250px) rotate(calc(var(--i) * -90deg));
-  white-space: nowrap;
   text-align: center;
-  transition: color 0.3s;
-  cursor: pointer;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: color 0.3s ease;
 }
 
-.circle-item:hover {
+.nav-item:hover {
   color: #824c9a;
 }
 
-/* -------------------- Optional Animation -------------------- */
-@keyframes rotateCircle {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* -------------------- Responsive -------------------- */
+/* ---------------- Responsive ---------------- */
 @media (max-width: 768px) {
   .initial {
-    font-size: 40px;
+    font-size: 48px;
   }
 
-  .circle-manual {
-    width: 320px;
-    height: 320px;
+  .circle-nav {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
   }
 
-  .circle-item {
-    font-size: 20px;
-    transform: rotate(calc(var(--i) * 90deg)) translate(160px) rotate(calc(var(--i) * -90deg));
+  .nav-item {
+    top: -150px;
+    font-size: 24px;
+
   }
+
 }
