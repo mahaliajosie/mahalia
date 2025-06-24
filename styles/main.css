@@ -1,14 +1,16 @@
   /* ------------------------------------------------------ */
-  /* =============== Initial Style =============== */
+  /* =============== Base Style =============== */
   body {
     margin: 0;
-    font-family: 'Gloock', serif;
+    /* padding: 0; */
+    font-family: 'General Sans', sans-serif;
+    /* overflow: hidden; */
     background: url('/assets/images/homepage_bg.png') no-repeat center center fixed;
     background-size: cover;
-    color: rgba(232, 28, 232, 0.667);
+    /* color: rgba(232, 28, 232, 0.667); */
   }
   
-  /* ========== Layout ========== */
+  /* ========== Landing Page ========== */
   .landing-page {
     display: flex;
     justify-content: center;
@@ -16,13 +18,14 @@
     height: 100vh;
   }
   
+  /* ======= Circle Background Wrapper ======= */
   .circle-bg {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
   }
   
-  /* ========== Center Circle ========== */
+  /* ========== Center Circle + Name ========== */
   .circle-core {
     position: absolute;
     top: 50%;
@@ -34,12 +37,13 @@
   
   .initial {
     font-size: 3.5rem;
+    /* font-weight: 400; */
     font-family: 'Gloock', serif;
     color: #412234;
   }
   
   .divider {
-    width: 60px;
+    width: 80px;
     border: 1px solid #412234;
     margin: 10px auto;
   }
@@ -51,25 +55,38 @@
   
   /* ========== Circle Navigation ========== */ 
   .circle-nav {
-    height: auto;
     width: 100%;
+    /* height: auto;
     max-width: 1000px;
     overflow: visible;
     display: block;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; */
+    height: 100%;
+    padding-top: 100px; /* Adds space  */
+    box-sizing: border-box;
+    z-index: 1;
 
+    /* animation: rotateCircle 20s linear infinite; */
+    animation: rotateCircle 40s linear infinite;
+    transform-origin: center;
+    transition: animation-play-state 0.5s ease-out;
+  }
+
+  .circle-nav:hover {
+    /* animation-play-state: paused; */
+    animation: rotateCircleStop 1s ease-out forwards;
   }
   
   .nav-text {
     fill: #2E4052;
     font-size: 3.0rem;
-    font-weight: 900;
+    font-weight: 600;
     font-family: 'Clash Display', sans-serif;
     text-anchor: middle;
-    letter-spacing: 1.5px;
-    transition: fill 0.3s ease;
+    letter-spacing: 2.5px;
+    /* transition: fill 0.3s ease;
     cursor: pointer;
-    pointer-events: all;
+    pointer-events: all; */
   }
   
   /* ========== Hover Effect ========== */
@@ -82,3 +99,43 @@
     stroke: red;
     stroke-width: 0.5px;
   } */
+
+  /* ====== Responsive Considerations ====== */
+@media (max-width: 768px) {
+  .circle-bg {
+    width: 600px;
+    height: 600px;
+  }
+
+  .initial {
+    font-size: 40px;
+  }
+
+  .nav-text {
+    font-size: 16px;
+  }
+}
+
+/* ====== Animation ====== */
+/* @keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Original rotation */
+@keyframes rotateCircle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Slow down on hover */
+@keyframes rotateCircleStop {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(10deg); }
+}
+
+  /* ------------------------------------------------- */

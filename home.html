@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>maelynn // Home</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Alfa+Slab+One&display=swap" rel="stylesheet"> -->
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700,500,400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700,500,400&f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
@@ -18,34 +21,35 @@
         <span class="star">✦</span>
       </div>
 
-      <svg class="circle-nav" viewBox="0 -100 1000 1200" preserveAspectRatio="xMidYMid meet">
-        <defs>
-          <path id="circlePath"
-            d="M 500,530
-               m -350,0
-               a 350,350 0 1,1 700,0
-               a 350,350 0 1,1 -700,0" />
-        </defs>
+      <!-- Animated Rotating SVG -->
+      <div class="circle-wrapper">
+        <svg class="circle-nav" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <path id="circlePath"
+              d="M 250,250
+                 m -120,0
+                 a 120,120 0 1,1 240,0
+                 a 120,120 0 1,1 -240,0" />
+          </defs>
 
-        <!-- Use a single full circle, then offset each link -->
-        <!-- <text class="nav-text" dominant-baseline="middle" text-anchor="middle">
-          <textPath href="#circlePath" startOffset="1%">My Collection •</textPath>
-        </text> -->
-        <text dy="-12" class="nav-text">
-          <textPath href="#circlePath" startOffset="5%">My Collection •</textPath>
-        </text>
-        <text dy="-12" class="nav-text">
-          <textPath href="#circlePath" startOffset="25%">Current Obsessions •</textPath>
-        </text>
-        <text dy="-12" class="nav-text">
-          <textPath href="#circlePath" startOffset="50%">The Reco Room •</textPath>
-        </text>
-        <text dy="-12" class="nav-text">
-          <textPath href="#circlePath" startOffset="75%">Possibility Archive •</textPath>
-        </text>
-      </svg>
+          <!-- Text Along Circle Path -->
+          <text dy="0" class="nav-text">
+            <textPath href="#circlePath" startOffset="0%">My Collection ✧</textPath>
+          </text>
+          <text dy="0" class="nav-text">
+            <textPath href="#circlePath" startOffset="25%">Current Obsessions ✧</textPath>
+          </text>
+          <text dy="0" class="nav-text">
+            <textPath href="#circlePath" startOffset="50%">The Reco Room ✧</textPath>
+          </text>
+          <text dy="0" class="nav-text">
+            <textPath href="#circlePath" startOffset="75%">Possibility Archive ✧</textPath>
+          </text>
+        </svg>
+      </div>
     </div>
   </main>
+
   <script src="scripts/main.js"></script>
 </body>
 </html>
