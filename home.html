@@ -2,63 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maelynn</title>
+
+  <!-- main stylesheet -->
   <link rel="stylesheet" href="styles/main.css" />
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="background"></div>
-
-  <div class="centered-content">
+  <div class="stage">
+    <!-- title -->
     <h1 class="title">Maelynn</h1>
-  
-    <div class="svg-wrapper">
-      <svg viewBox="0 0 600 600" class="circle-svg">
-        <defs>
-          <path id="circlePath" d="M300,300 m-260,0 a260,260 0 1,1 520,0 a260,260 0 1,1 -520,0" />
-        </defs>
 
-        <text class="nav-text">
-          <textPath 
-            href="#circlePath" 
-            startOffset="-2%" 
-            textLength="250" 
-            lengthAdjust="spacing">
-            <a href="#my-collection">My Collection ✦</a>
-          </textPath>
-        </text>
-        <text class="nav-text">
-          <textPath 
-            href="#circlePath" 
-            startOffset="23%" 
-            textLength="350" 
-            lengthAdjust="spacing">
-            <a href="#current-obsessions">Current Obsessions ✦</a>
-          </textPath>
-        </text>
-        <text class="nav-text">
-          <textPath 
-            href="#circlePath" 
-            startOffset="49%" 
-            textLength="280" 
-            lengthAdjust="spacing">
-            <a href="#the-reco-room">The Reco Room ✦</a>
-          </textPath>
-        </text>
-        <text class="nav-text">
-          <textPath 
-            href="#circlePath" 
-            startOffset="74%" 
-            textLength="335" 
-            lengthAdjust="spacing">
-            <a href="#possibility-archive">Possibility Archive ✦</a>
-          </textPath>
-        </text>
-      </svg>
-    </div>
+    <!-- circular navigation -->
+    <svg class="nav-ring" viewBox="0 0 600 600">
+      <defs>
+        <!-- centred at 300,300 — radius 260 -->
+        <path
+          id="ring"
+          d="M300,300
+             m-260,0
+             a260,260 0 1,1 520,0
+             a260,260 0 1,1 -520,0"
+        />
+      </defs>
+      <!-- Red Circle for Debugging -->
+      <!-- <use href="#ring" stroke="red" stroke-width="1" fill="none" /> -->
+
+      <!-- (1/4) My Collection -->
+      <text class="nav-text" dominant-baseline="hanging">
+        <textPath
+          href="#ring"
+          startOffset="11%"
+          textLength="320"
+          lengthAdjust="spacing"
+        >
+          <a href="#my-collection">✦ My Collection</a>
+        </textPath>
+      </text>
+
+      <!-- (2/4) Current Obsessions -->
+      <text class="nav-text" dominant-baseline="hanging">
+        <textPath
+          href="#ring"
+          startOffset="35%"
+          textLength="450"
+          lengthAdjust="spacing"
+        >
+          <a href="#current-obsessions">✦ Current Obsessions</a>
+        </textPath>
+      </text>
+
+      <!-- (3/4) The Reco Room -->
+      <text class="nav-text" dominant-baseline="hanging">
+        <textPath
+          href="#ring"
+          startOffset="60%"
+          textLength="360"
+          lengthAdjust="spacing"
+        >
+          <a href="#the-reco-room">✦ The Reco Room</a>
+        </textPath>
+      </text>
+
+      <!-- (4/4)Possibility Archive -->
+      <text class="nav-text" dominant-baseline="hanging">
+        <textPath
+          href="#ring"
+          startOffset="85%"
+          textLength="460"
+          lengthAdjust="spacing"
+        >
+          <a href="#possibility-archive">✦ Possibility Archive</a>
+        </textPath>
+      </text>
+    </svg>
   </div>
 </body>
 </html>
+
+<!-- textLength="300"
+lengthAdjust="spacing" -->
