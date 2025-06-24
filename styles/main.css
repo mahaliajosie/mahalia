@@ -14,17 +14,20 @@ body {
   height: 100vh;
 }
 
-.title {
+.title-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -52%); /* adjust vertical offset */
+  z-index: 2;
+}
+
+.title {
   font-family: 'Gloock', serif;
   font-size: 72px;
   font-weight: 500;
   color: #561f35;
   text-align: center;
-  z-index: 2;
 }
 
 .nav-circle {

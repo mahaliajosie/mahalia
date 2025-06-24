@@ -10,16 +10,26 @@
 </head>
 <body>
   <div class="circle-container">
-    <h1 class="title">Maelynn</h1>
+    <div class="title-wrapper">
+      <h1 class="title">Maelynn</h1>
+    </div>
 
     <svg class="nav-circle" viewBox="0 0 600 600">
       <defs>
-        <path id="circlePath" d="M300,300 m-250,0 a250,250 0 1,1 500,0 a250,250 0 1,1 -500,0" />
+        <path id="path1" d="M300,300 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
       </defs>
-      <text font-size="36" font-family="Clash Display" fill="#1c2e35" text-anchor="middle">
-        <textPath href="#circlePath" startOffset="50%">
-          ✦ My Collection • Current Obsessions • The Reco Room • Possibility Archive ✦
-        </textPath>
+
+      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
+        <textPath href="#path1" startOffset="2%">✦ My Collection</textPath>
+      </text>
+      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
+        <textPath href="#path1" startOffset="28%">✦ Current Obsessions</textPath>
+      </text>
+      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
+        <textPath href="#path1" startOffset="54%">✦ The Reco Room</textPath>
+      </text>
+      <text font-size="32" font-family="Clash Display" fill="#1c2e35">
+        <textPath href="#path1" startOffset="80%">✦ Possibility Archive</textPath>
       </text>
     </svg>
   </div>
