@@ -21,30 +21,12 @@
         <span class="star">✦</span>
       </div>
 
-      <!-- Animated Rotating SVG -->
-      <div class="circle-wrapper">
-        <svg class="circle-nav" viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <path id="circlePath"
-              d="M 600,600
-                 m -360,0
-                 a 360,360 0 1,1 720,0
-                 a 360,360 0 1,1 -720,0" />
-          </defs>
-      
-          <text dy="18" class="nav-text">
-            <textPath href="#circlePath" startOffset="0%">My Collection ✧</textPath>
-          </text>
-          <text dy="18" class="nav-text">
-            <textPath href="#circlePath" startOffset="25%">Current Obsessions ✧</textPath>
-          </text>
-          <text dy="18" class="nav-text">
-            <textPath href="#circlePath" startOffset="52%">The Reco Room ✧</textPath>
-          </text>
-          <text dy="18" class="nav-text">
-            <textPath href="#circlePath" startOffset="76%">Possibility Archive ✧</textPath>
-          </text>
-        </svg>
+      <!-- Circle Navigation -->
+      <div class="circle-nav">
+        <div class="circle-item" style="--i: 0">My Collection ✧</div>
+        <div class="circle-item" style="--i: 1">Current Obsessions ✧</div>
+        <div class="circle-item" style="--i: 2">The Reco Room ✧</div>
+        <div class="circle-item" style="--i: 3">Possibility Archive ✧</div>
       </div>
     </div>
   </main>
