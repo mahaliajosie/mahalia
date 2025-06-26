@@ -1,4 +1,4 @@
-import { initHoverEffects } from './hoverEffects.js';
+import { initHoverEffects } from './effects.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHoverEffects();

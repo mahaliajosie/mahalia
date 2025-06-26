@@ -3,12 +3,19 @@
   --font-main:  "Clash Display", sans-serif;
   --font-title: "Gloock", serif;
 
-  --clr-nav:    #1c2e35;
-  --clr-hover:  #8e4585;
-  --clr-title:  #561f35;
+  --clr-nav:    #2E4052;
+  --clr-hover:  #D90368; /* 8e4585 - light purple */
+  --clr-title:  #820263;
+
+  /* controls the circle speed */
+  --spinSpeed: 20s;
 }
 
-/* ---------- full-page backdrop ---------- */
+/* ---------- landing page & effects ---------- */
+@keyframes fadeIn { 
+  from{opacity:0} 
+  to{opacity:1}
+}
 body {
   margin: 0;
   height: 100vh;
@@ -20,14 +27,21 @@ body {
   background: url("../assets/images/homepage_bg.png")
               center/cover fixed no-repeat;
   overflow: hidden;
+
+  animation:fadeIn .8s ease forwards;   /* fade-in home page */
 }
 
-/* ---------- centring wrapper ---------- */
+/* ---------- center circle wrapper ---------- */
 .stage {
   position: relative;
   width: 600px;   /* equals viewBox  */
   height: 600px;
 }
+
+.stage:hover{ 
+  --spinSpeed:80s;              /* slows down on hover  */
+  /* animation-play-state:paused;    /* stop completely */
+}       
 
 /* ---------- title ---------- */
 .title {
@@ -44,18 +58,28 @@ body {
   text-align: center;
 }
 
-/* ---------- nav ring ---------- */
+/* ---------- nav ring & continuous spin ---------- */
 .nav-ring {
   position: absolute;
   top: 0;
   left: 0;
+  inset: 0;
   width: 600px;
   height: 600px;
+
+  animation:spin var(--spinSpeed) linear infinite;   /* spin circle */
+  transform-origin:center;
 
   /* for debugging */
   /* stroke: red;
   stroke-width: 1;
-  fill: none;       */
+  fill: none; */
+}
+
+/* spin keyframes */
+@keyframes spin{
+  from{ transform:rotate(0deg); }
+  to  { transform:rotate(360deg); }
 }
 
 .nav-text {
@@ -69,10 +93,22 @@ body {
 .nav-text a {
   fill: var(--clr-nav);
   text-decoration: none;
-  transition: fill 0.25s ease;
+  transition: fill 0.25s ease, letter-spacing .25s ease;;
   cursor: pointer;
 }
 
-.nav-text a:hover {
-  fill: var(--clr-hover);
+/* individual hover pulse */
+.nav-text a:hover{
+  fill:var(--clr-hover);
+  letter-spacing:1px; /* slight pulse */
 }
+
+/* ---------- burst animation on click ---------- */
+@keyframes burst{                          
+  0%   { transform:scale(1);   opacity:1; }
+  60%  { transform:scale(1.15);}
+  100% { transform:scale(.4);  opacity:0; }
+}
+.burst{ 
+  animation:burst .35s ease forwards; 
+}  
